@@ -15,26 +15,28 @@ const reactsQuoi = [
     "***feur***",
     "FEUR",
     ]   
-const triggersQuoi = ["quoi","kwa","quoi?","kwa?"]
+const triggersQuoi = ["quoi","kwa"]
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('messageCreate', async (message) =>{
     if (message.author.bot) return false;
-    let words = message.content.toLowerCase().split(" ");
+    let msg = message.content.toLowerCase();
+    if (msg.includes("feur")){
+        message.delete();
+        return false;
+    }
+    if (msg.includes("pourquoi")){
+        await message.reply("bah pour feur mec")
+        return false;
+    }
     triggersQuoi.forEach(trig =>{
-        if (words.includes(trig)) {
+        if (msg.includes(trig)) {
             message.reply(reactsQuoi[Math.floor(Math.random()*reactsQuoi.length)])
+            return false;
         }
     })
-
-    if (words.includes("pourquoi")|| words.includes("pourquoi?")){
-        await message.reply("bah pour feur mec")
-    }
-    if (words.includes("feur")){
-        message.delete();
-    }
 });
 
 client.login(process.env.TOKEN);
