@@ -11,6 +11,9 @@
     "bot",
     "feur"
   ],
+  "engines": {
+    "node": "18.15.0"
+  },
   "author": "NoeJuza",
   "license": "MIT",
   "dependencies": {
