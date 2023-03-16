@@ -1,0 +1,20 @@
+{
+  "name": "feurbot",
+  "version": "1.0.0",
+  "description": "lol",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "feur"
+  ],
+  "author": "NoeJuza",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3"
+  }
+}
