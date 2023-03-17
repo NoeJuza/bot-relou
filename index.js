@@ -61,7 +61,7 @@ client.on('messageCreate', async (message) => {
 
     if (msg.split(" ").includes("ratio")) {
         const special = Math.round(Math.random() * 100) <= 60; // 60% chance
-        if (message.author.id == 381821906824724492 && special) { // React to Adrien
+        if (message.author.id == "381821906824724492" && special) { // React to Adrien
             message.reply(reactsRatioAdrien[Math.floor(Math.random() * reactsRatioAdrien.length)])
         } else {
             message.reply(reactsRatio[Math.floor(Math.random() * reactsRatio.length)])
