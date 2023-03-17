@@ -64,7 +64,7 @@ client.on('messageCreate', async (message) => {
         if (message.author.id == 381821906824724492 && special) { // React to Adrien
             message.reply(reactsRatioAdrien[Math.floor(Math.random() * reactsRatioAdrien.length)])
         } else {
-            message.reply(`You are ${msg.author}\n` + reactsRatio[Math.floor(Math.random() * reactsRatio.length)])
+            message.reply(reactsRatio[Math.floor(Math.random() * reactsRatio.length)])
         }
         return false;
     }
